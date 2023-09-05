@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { createBrowserRouter, RouteProvider} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from './routes/Home/index.jsx'
 import Produtos from './routes/Produtos/index.jsx'
 import Error from './routes/Error/index.jsx'
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
-    errorElement: <error/>,
+    errorElement: <Error/>,
     children:[
 {
   path: "/",
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   element: <Produtos/>
 },
 {
-  path:"/produto/editar/:id",
+  path:"/produtos/editar/:id",
   element: <EditarProduto/>
 }
     ]
